@@ -1,0 +1,22 @@
+{
+  "name": "jmot",
+  "version": "1.0.0",
+  "description": "jmot bot here to do everything for you",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvash17/JMOT.git"
+  },
+  "author": "vvash17",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvash17/JMOT/issues"
+  },
+  "homepage": "https://github.com/vvash17/JMOT#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
