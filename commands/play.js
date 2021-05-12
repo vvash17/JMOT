@@ -2,8 +2,8 @@ const ytdl = require('ytdl-core');
 const ytsearch = require('yt-search');
 
 module.exports = {
-    name : 'play',
-    description : 'Joins and plays a video from youtube',
+    name: 'play',
+    description: 'Joins and plays a video from youtube',
     async execute(message, args) {
         const voiceChannel = message.member.voice.channel;
 
@@ -24,12 +24,12 @@ module.exports = {
 
         const video = await videoFinder(args.join(' '));
 
-        if(video){
+        if (video) {
             const stream = ytdl(video.url, {filter: 'audioonly'});
             connection.play(stream, {seek: 0, volume: 1})
-            .on('finish', () => {
-                voiceChannel.leave();
-            })
+                .on('finish', () => {
+                    voiceChannel.leave();
+                })
 
             await message.reply(':thumbsup: NowPlaying ***'.concat(video.title).concat('***'));
         } else {

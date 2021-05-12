@@ -1,6 +1,6 @@
 module.exports = {
-    name : 'disconnect',
-    description : 'disconnects JMOT from channel',
+    name: 'disconnect',
+    description: 'disconnects JMOT from channel',
     async execute(message, args) {
         const voiceChannel = message.member.voice.channel;
 

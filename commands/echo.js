@@ -1,6 +1,6 @@
 module.exports = {
-    name : 'echo',
-    description : 'echoes voice of summoner',
+    name: 'echo',
+    description: 'echoes voice of summoner',
     async execute(message, args) {
         const voiceChannel = message.member.voice.channel;
 
@@ -10,9 +10,9 @@ module.exports = {
         if (!permissions.has('SPEAK')) return message.channel.send('You do not have permission to speak');
         const connection = await voiceChannel.join();
 
-        const stream = connection.receiver.createStream(message.member.user,{});
+        const stream = connection.receiver.createStream(message.member.user, {});
 
-        connection.play(stream,{seek: 0, volume: 1})
+        connection.play(stream, {seek: 0, volume: 1})
         //TODO implement this in the future
     }
 }
